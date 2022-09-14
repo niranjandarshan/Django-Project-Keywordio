@@ -1,0 +1,58 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{%static 'css/style.css'%}">
+
+    <style>
+
+        #maindiv{
+            display: inline-block;
+            margin: 10%;
+        }
+
+        #my-div {
+            background-color: rgb(180, 120, 221);
+            width: 200px;
+            height: 200px;
+        }
+        a.fill-div {
+            display: block;
+            height: 100%;
+            width: 100%;
+            text-decoration: none;
+        }
+        
+    </style>
+</head>
+<body>
+    <form action="#" method="post">
+        {% csrf_token %}
+    {% load static %}
+    <div id="maindiv">
+        <div id="my-div">
+
+            <a href="login" class="fill-div">
+                <div class="imgcontainer">
+                    <img src="{% static 'image/admin_avatar.jpg' %}" alt="Avatar" class="avatar">
+                </div>Admin</a>
+        </div>
+        </div><div id="maindiv">
+        <div id="my-div">
+            <a href="login_student" class="fill-div">
+                <div class="imgcontainer">
+                    <img src="{% static 'image/student_avatar.png' %}" alt="Avatar" class="avatar">
+                </div>Student</a>
+        </div>
+    </div>
+   
+   
+
+</form>
+</body>
+</html>

@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update</title>
+    <link rel="stylesheet" type="text/css" href="{%static 'css/style.css'%}">
+
+</head>
+<body>
+    <nav class="main_nav">
+        <ul class="headerul">
+           
+            <li class="active"><a href="show">Show Data</a></li>
+            <li><a href="create">create</a></li>
+            <li><a href="update">Update</a></li>
+            <li><a href="delete">Delete</a></li>
+            <li><a href="retrieve">Retrieve</a></li>
+            <li><a href="http://localhost:8000/login"> Logout</a></li>
+
+        </ul>
+    </nav>
+    <center><h1>Update Quantity in Book Entry </h1></center>
+        <form action="#" method="post">
+            {% csrf_token %}
+            {% load static %}
+            <center><div class="imgcontainer">
+                <img src="{% static 'image/book.jpg' %}" alt="Avatar" class="avatar">
+            </div>
+                
+                <label for='bookid'><b>Book Id : </b></label>
+		        <input type='number' placeholder="Enter your Book id" name='bookid' required><br>
+                <label for='quantity'><b>Book Quantity : </b></label>
+		        <input type='number' placeholder="Enter your Quantity" name='quantity' required><br>
+		         
+            	<button type="submit"><b>Update</b></button><br>     
+            	
+            </div></center>
+        </form> 
+</body>
+</html>

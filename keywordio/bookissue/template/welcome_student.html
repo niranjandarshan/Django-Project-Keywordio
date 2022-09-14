@@ -1,0 +1,56 @@
+{% load static  %}
+<html>
+    <head>
+        <title>Welcome Page</title>
+        <link rel="stylesheet" type="text/css" href="{%static 'css/style.css'%}">
+
+        <style>
+            table, th, td {
+              border: 1px solid black;
+            }
+            </style>
+    </head>
+    <body>
+        <nav class="main_nav">
+            <ul class="headerul">
+               
+                
+                <li><a href="http://localhost:8000/login_student/"> Logout</a></li>
+
+            </ul>
+        </nav>
+        <center>
+        <div class="header">
+            <div class="logo"><h1> Welcome  To MainPage </h1></div>
+            <div class="imgcontainer">
+                <img src="{% static 'image/book.jpg' %}" alt="Avatar" class="avatar">
+            </div>
+          
+          
+
+        </div>
+        <center><h1>Book List</h1>
+        
+        <table class="tbl">
+            <th >BookId</th>
+            <th>BookName</th>
+            <th>Author</th>
+            <th>Quantity</th>
+            
+            {%for t in category%}
+                <tr class="'tbl">
+                    <td>{{t.0}}</td>
+                    <td>{{t.1}}</td>
+                    <td>{{t.2}}</td>
+                    <td>{{t.3}}</td>
+
+                </tr>
+                {%endfor%}
+           
+        </table>
+        
+
+    </center>
+    </body>
+
+</html>
